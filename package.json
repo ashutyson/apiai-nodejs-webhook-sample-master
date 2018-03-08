@@ -4,7 +4,7 @@
   "description": "a sample webhook (with authentication) for api.ai",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/supermamon/apiai-nodejs-webhook-sample.git"
+    "url": "git+https://github.com/ashutyson/apiai-nodejs-webhook-sample-master.git"
   },
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,7 @@
     "apiai",
     "webhook"
   ],
-  "author": "Raymond Velasquez <at.supermamon@gmail.com> (https://supermamon.com)",
+  "author": "Ashwin",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.17.2",
@@ -24,8 +24,8 @@
     "node": "8.1.4"
   },
   "bugs": {
-    "url": "https://github.com/supermamon/apiai-nodejs-webhook-sample/issues"
+    "url": "https://github.com/ashutyson/apiai-nodejs-webhook-sample-master/issues"
   },
-  "homepage": "https://github.com/supermamon/apiai-nodejs-webhook-sample#readme",
+  "homepage": "https://github.com/ashutyson/apiai-nodejs-webhook-sample-master#readme",
   "devDependencies": {}
 }
