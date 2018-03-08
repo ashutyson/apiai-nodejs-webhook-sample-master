@@ -35,15 +35,36 @@ app.post('/webhook', function (req, res) {
   console.log('* Received action -- %s', req.body.result.action)
 
   // parameters are stored in req.body.result.parameters
-  var userName = req.body.result.parameters['given-name']
-  var webhookReply = 'Hello ' + userName + '! Welcome from the webhook.'
+  var taskValue = req.body.result.parameters['taskID']
+
+  
+  
+  
+  let url = 'https://mdcs0014121431trial.hanatrial.ondemand.com/ChatBotProject/services/wms.xsjs?taskID=${taskValue}'
+
+  request(url, function (err, response, body) {
+      if(err){
+          console.log('error:', error);
+      } else {
+          let res = JSON.parse(body);
+          res.status(200).json({
+              source: 'webhook',
+              speech: res,
+              displayText: res
+          })
+          
+          
+      }
+  });
+
+ // var webhookReply = 'Hello ' + taskValue + '! Welcome from the webhook.'
 
   // the most basic response
-  res.status(200).json({
-    source: 'webhook',
-    speech: webhookReply,
-    displayText: webhookReply
-  })
+ // res.status(200).json({
+  //  source: 'webhook',
+  //  speech: webhookReply,
+  //  displayText: webhookReply
+  //})
 })
 
 app.listen(app.get('port'), function () {
