@@ -40,7 +40,7 @@ app.post('/webhook', function (req, res) {
   
   
   
-  let url = 'https://mdcs0014121431trial.hanatrial.ondemand.com/ChatBotProject/services/wms.xsjs?taskID=${taskValue}'
+  let url = 'https://mdcs0014121431trial.hanatrial.ondemand.com/ChatBotProject/services/demo4.xsjs?taskID=${taskValue}'
 
   request(url, function (err, response, body) {
       if(err){
